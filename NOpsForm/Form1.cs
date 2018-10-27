@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NOpsForm.Models;
 
 namespace NOpsForm
 {
@@ -15,23 +17,24 @@ namespace NOpsForm
         public Form1()
         {
             InitializeComponent();
-            //mainMenuStrip.BackColor = Color.Black;
-            //mainMenuStrip.ForeColor = Color.AntiqueWhite;
-            //newToolStripMenuItem.BackColor=Color.Black;
-            //newToolStripMenuItem.ForeColor = Color.AntiqueWhite;
+
             mainMenuStrip.Renderer = new ToolStripProfessionalRenderer(new TestColorTable());
-            mainMenuStrip.ForeColor=Color.AntiqueWhite;
+            mainMenuStrip.ForeColor = Color.AntiqueWhite;
             newToolStripMenuItem.ForeColor = Color.AntiqueWhite;
             exitToolStripMenuItem.ForeColor = Color.AntiqueWhite;
-
+            GenData();
+        }
+        
+        private void GenData()
+        {
             for (var n = 0; n < 100; n++)
             {
-                var p = new TestPanel("TestPanel" + n);
-                
-                flowLayoutPanel1.Controls.Add(p);
+                var i = new TestPanel("TestPanel" + n);
+                flowLayoutPanel1.Controls.Add(i);
             }
-        }
 
+
+        }
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();

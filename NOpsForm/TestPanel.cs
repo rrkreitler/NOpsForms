@@ -25,6 +25,7 @@ namespace NOpsForm
         {
             InitializeComponent();
             this.title = title;
+            
         }
 
         private void TestPanel_Load(object sender, EventArgs e)
@@ -32,7 +33,7 @@ namespace NOpsForm
             TestPanelName.Text = title;
         }
 
-        private void TestPanel_MouseEnter(object sender, EventArgs e)
+        public void TestPanel_MouseEnter(object sender, EventArgs e)
         {
             this.BackColor = Color.Goldenrod;
         }
@@ -40,6 +41,11 @@ namespace NOpsForm
         private void TestPanel_MouseLeave(object sender, EventArgs e)
         {
             this.BackColor = Color.AntiqueWhite;
+        }
+
+        private void TestPanelName_MouseEnter(object sender, EventArgs e)
+        {
+            this.OnMouseEnter(new EventArgs());
         }
     }
 }

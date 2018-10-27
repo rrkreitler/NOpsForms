@@ -39,17 +39,19 @@
             this.TestPanelName.Size = new System.Drawing.Size(35, 13);
             this.TestPanelName.TabIndex = 0;
             this.TestPanelName.Text = "label1";
+            this.TestPanelName.MouseEnter += new System.EventHandler(this.TestPanelName_MouseEnter);
             // 
             // TestPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.TestPanelName);
             this.Name = "TestPanel";
-            this.Size = new System.Drawing.Size(375, 85);
+            this.Size = new System.Drawing.Size(373, 83);
             this.Load += new System.EventHandler(this.TestPanel_Load);
-            this.MouseLeave += new System.EventHandler(this.TestPanel_MouseLeave);
             this.MouseEnter += new System.EventHandler(this.TestPanel_MouseEnter);
+            this.MouseLeave += new System.EventHandler(this.TestPanel_MouseLeave);
             this.ResumeLayout(false);
             this.PerformLayout();
 
